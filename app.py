@@ -3,7 +3,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from utils import *
 import uuid
-import pyperclip
+import clipboard
 
 
 st.set_page_config(page_title="Resume Screening Assistance")
@@ -58,9 +58,9 @@ def main():
 #--------------------------------------------------------------------------------------------------------------------
 
     with st.expander('**Example job description for Junior ML Engineer**'): 
-        if st.button("Copy Expander Text"):
-            pyperclip.copy(expander_text)
-            st.success("Expander text copied to clipboard!")   
+        # if st.button("Copy Expander Text"):
+            # clipboard.copy(expander_text)
+            # st.success("Expander text copied to clipboard!")   
         st.info(expander_text)
 
     

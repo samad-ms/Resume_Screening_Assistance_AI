@@ -9,6 +9,7 @@ pypdf==3.17.2
 unstructured==0.11.5
 pinecone-client
 langchain-pinecone
+clipboard
 # sentence-transformers
 
 
