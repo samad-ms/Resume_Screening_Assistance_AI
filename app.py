@@ -71,7 +71,7 @@ def main():
 
     submit=st.button("Help me with the analysis")
 
-    if submit and job_description and pdf:
+    if submit and job_description:
         with st.spinner('Wait for it...'):
 
             #Creating a unique ID, so that we can use to query and get only the user uploaded documents from PINECONE vector store
