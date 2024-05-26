@@ -1,0 +1,14 @@
+openai
+langchain_openai
+tiktoken
+langchain
+langchain-community
+streamlit==1.29.0
+python-dotenv
+pypdf==3.17.2
+unstructured==0.11.5
+pinecone-client
+langchain-pinecone
+# sentence-transformers
+
+
