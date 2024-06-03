@@ -1,4 +1,4 @@
-# Resume Screening Assistance
+# Resume Screening Assistance ( live link - https://resume-screening-assistance-ai.streamlit.app/ )
 
 ![Python](https://img.shields.io/badge/python-v3.10-blue)
 ![OpenAI](https://img.shields.io/badge/OpenAI-v3.5-blue)
