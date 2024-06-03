@@ -1,15 +1,16 @@
 openai
-langchain_openai
 tiktoken
-langchain
 langchain-community
-streamlit==1.29.0
 python-dotenv
-pypdf==3.17.2
-unstructured==0.11.5
 pinecone-client
 langchain-pinecone
-clipboard
+clipboard==0.0.4
+langchain==0.2.1
+langchain_openai==0.1.8
+langchain_pinecone==0.1.1
+pypdf==4.2.0
+python-dotenv==1.0.1
+streamlit==1.29.0
+unstructured==0.11.5
 # sentence-transformers
-
 

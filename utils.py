@@ -1,16 +1,16 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 load_dotenv()
 from typing import Any, List, Tuple
-from pypdf import PdfReader
-from langchain.schema.document import Document
-from langchain_openai import OpenAIEmbeddings
+from pypdf import PdfReader # type: ignore
+from langchain.schema.document import Document # type: ignore
+from langchain_openai import OpenAIEmbeddings # type: ignore
 # from langchain_community.embeddings import HuggingFaceEmbeddings
 # https://python.langchain.com/v0.1/docs/integrations/vectorstores/pinecone/
-from langchain_pinecone import PineconeVectorStore
-from langchain_openai import OpenAI
-from langchain.chains.summarize import load_summarize_chain
+from langchain_pinecone import PineconeVectorStore # type: ignore
+from langchain_openai import OpenAI # type: ignore
+from langchain.chains.summarize import load_summarize_chain # type: ignore
 
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 load_dotenv()
 
 import streamlit as st
@@ -70,7 +70,7 @@ def get_summary(current_doc):
     llm = OpenAI(temperature=0)
     #llm = HuggingFaceHub(repo_id="bigscience/bloom", model_kwargs={"temperature":1e-10})
     chain = load_summarize_chain(llm, chain_type="map_reduce")
-    summary = chain.run([current_doc])
+    summary = chain.invoke([current_doc])
     return summary
 
 

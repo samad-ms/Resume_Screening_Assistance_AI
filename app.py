@@ -1,9 +1,9 @@
 
 import streamlit as st
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 from utils import *
 import uuid
-import clipboard
+import clipboard # type: ignore
 
 
 st.set_page_config(page_title="Resume Screening Assistance")
@@ -58,9 +58,9 @@ def main():
 #--------------------------------------------------------------------------------------------------------------------
 
     with st.expander('**Example job description for Junior ML Engineer**'): 
-        # if st.button("Copy Expander Text"):
-            # clipboard.copy(expander_text)
-            # st.success("Expander text copied to clipboard!")   
+        if st.button("Copy Expander Text"):
+            clipboard.copy(expander_text)
+            st.success("Expander text copied to clipboard!")   
         st.info(expander_text)
 
     
@@ -113,8 +113,10 @@ def main():
                     # st.write("***"+relavant_docs[item][0].page_content)
 
                     #Gets the summary of the current item using 'get_summary' function that we have created which uses LLM & Langchain chain
-                    summary = get_summary(relavant_docs[item][0])
-                    st.write("**Summary** : "+summary)
+                    # st.write(relavant_docs[item][0])#--------------------
+                    # st.write(relavant_docs[item][0].page_content)#--------------------
+                    summary = get_summary(relavant_docs[item][0])['output_text']
+                    st.write("**Summary** : "+str(summary))
 
         st.success("Hope I was able to save your time⏰")
 
