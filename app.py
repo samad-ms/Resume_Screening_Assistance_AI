@@ -118,7 +118,7 @@ def main():
                     summary = get_summary(relavant_docs[item][0])['output_text']
                     st.write("**Summary** : "+str(summary))
 
-            st.success("Hope I was able to save your time⏰")
+            # st.success("Hope I was able to save your time⏰")
 
 
 #Invoking main function
